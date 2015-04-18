@@ -2,13 +2,21 @@
 <html>
 	<head>
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"/>
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="/js/photobooth_min.js"></script>
 		<script type="text/javascript">
+		<!--
 			$(document).ready(function() {
-				alert('s');
+				$('#example').photobooth().on("image",function( event, dataUrl ){
+					$( "#gallery" ).append( '<img src="' + dataUrl + '" >');
+				});
 			});
+		//-->
 		</script>
 	</head>
 	<body>
+		<div id="example" style="height: 300px; width: 470px"></div>
+		<div><a class="btn btn-primary btn-large" href="#">Enroll</a></div>
 	</body>
 </html>
