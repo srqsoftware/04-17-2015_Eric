@@ -1,0 +1,27 @@
+resources:
+  projectroot:
+spring:
+  application:
+    name: Eric
+    version: 0.0.1
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+      ddl-auto: validate
+  jackson:
+    date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+    serialization:
+      write-dates-as-timestamps: false
+  resources:
+    add-mappings: false
+    cache-period: 3600
+  datasource:
+    url: jdbc:postgresql://localhost/eric
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  thymeleaf:
+    cache: false
+    
